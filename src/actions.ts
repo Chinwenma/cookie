@@ -1,18 +1,23 @@
+"use server"
+
+
 import { getIronSession } from "iron-session"
-import { sessionOptions,sessionData } from "./libs"
+import { sessionOptions,SessionData, defaultSession } from "./libs"
 import { cookies } from "next/headers"
 
 export  const getSession = async () => {
-    "use server";
-    const session  = await getIronSession<sessionData> (cookies(), sessionOptions);
+    const session  = await getIronSession<SessionData> (cookies(), sessionOptions);
+    if(!session.isLoggedIn){
+        session.isLoggedIn = defaultSession.isLoggedIn;
+
+    }
+    
     return session;
     
-}
+};
 export  const login = async () => {
-    "use server"
-
+    
 }
 export  const logout = async () => {
-    "use server"
 
 }
