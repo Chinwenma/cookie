@@ -1,8 +1,8 @@
-export default function Home() {
+export default function PremiumPage() {
     return (
       <main>
         <div>
-          <h1>Hello Next JS</h1>
+          <h1>Hello Pro user</h1>
         </div>
       </main>
     );

@@ -1,8 +1,8 @@
-export default function Home() {
+export default function ProfilePage() {
     return (
       <main>
         <div>
-          <h1>Hello Next JS</h1>
+          <h1>Hello user</h1>
         </div>
       </main>
     );
