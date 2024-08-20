@@ -16,8 +16,11 @@ export const getSession = async () => {
   return session;
 };
 
-export const login = async (formData: FormData) => {
+export const login = async (prevState:{error:undefined | string},
+   formData: FormData
+  ) => {
   const session = await getSession();
+  
   const formUsername = formData.get("username") as string;
   const formPassword = formData.get("password") as string;
   //TODO: check if user exists and password is correct
@@ -35,5 +38,7 @@ export const login = async (formData: FormData) => {
   redirect("/")
   };
   export const logout = async () => {
-    
+    const session = await getSession();
+    session.destroy();
+    redirect("/");
   };

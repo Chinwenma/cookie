@@ -5,7 +5,7 @@
   }
   
   body {
-    background-color: #142c61;
+    background: linear-gradient(to right, rgb(63, 6, 6) 20%, rgb(21, 20, 97) 50%, rgb(2, 49, 2) 80%);
     color: #eee;
   }
   
@@ -52,6 +52,7 @@
     border-radius: 3px;
     transition: all 0.3s ease;
     width: max-content;
+    margin-top: 20px;
   }
   
   button:hover {
@@ -118,7 +119,36 @@
     border-radius: 3px;
     color: black;
     font-size: 20px;
+
   }
+  input[type="password"]{
+margin-top: 20px;
+  }
+  
+  .profile button {
+    margin-top: 20px;
+  }
+  
+  .profile button:hover {
+    scale: 1.05;
+  }
+  
+  .profile p {
+    font-size: 20px;
+  }
+  
+  .profile p b {
+    font-weight: 400;
+  }
+  
+  .profile p a {
+    color: #eee;
+    font-weight: 400;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .profile p a:hover {}
   
   b {
     font-weight: bold;
